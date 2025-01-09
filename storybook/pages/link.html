@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/594a9a3356.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/storybook.css">
+    <title>Link Component</title>
+</head>
+<body>
+
+    <span class="title">Span Links:</span>
+    <span class="link">
+        <a href="#" class="link__content">Sample Text</a>
+    </span>
+
+    <span class="link link--with-arrow">
+        <a href="#" class="link__content">With Icon</a>
+        <i class="link__icon fa-solid fa-caret-right"></i>
+    </span>
+
+    <span class="title">Li Links:</span>
+    <li class="link">
+        <a href="#" class="link__content">Default text</a>
+    </li>
+
+    <li class="link link--with-arrow">
+        <a href="#" class="link__content">Very very very long text with icon to show behaviour</a>
+        <i class="link__icon fa-solid fa-caret-right"></i>
+    </li>
+
+    <span class="title">Ul list context:</span>
+    <ul>
+        <li class="link">
+            <a href="#" class="link__content">Expand here</a>
+        </li>
+    </ul>
+
+    <ul>
+        <li class="link link--with-arrow">
+            <a href="#" class="link__content">See More</a>
+            <i class="link__icon fa-solid fa-caret-right"></i>
+        </li>
+    </ul>
+
+    <span class="title">Ol list context:</span>
+    <ol>
+        <li class="link">
+            <a href="#" class="link__content">Check this out</a>
+        </li>
+    </ol>
+    <ol>
+        <li class="link link--with-arrow">
+            <a href="#" class="link__content">Last example</a>
+            <i class="link__icon fa-solid fa-caret-right"></i>
+        </li>
+    </ol>
+
+    <span class="title">Quicklink span</span>
+    <span class="link link--quicklink">
+        <a href="#" class="link__content">Quicklink text</a>
+    </span>
+
+    <span class="title">Quicklink li:</span>
+    <li class="link link--quicklink">
+        <a href="#" class="link__content">Default text</a>
+    </li>
+
+    <script src="../js/link.js"></script>
+</body>
+</html>
