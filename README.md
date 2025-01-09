@@ -23,5 +23,14 @@ build.sh        # Bash script for building the project into dist directory
 ```
 Although this project does not utilize Webpack, Vite or similar bundlers, I will write a custom **bash script** (build.sh) to transpile styles and copy static assets into the `/dist` folder. This approach will help me better understand project build processes and workflows.
 
+## How to run
+
+In project's root directory:
+
+1. Run ```chmod +x build.sh``` <- this will allow build.sh script to build the application
+2. Run ```./build.sh```
+
+Page will automatically open in browser after successful build process.
+
 ## Attribution
 The project is created for personal learning purposes only. All credits go to the creators of the Boostrap design.
