@@ -41,6 +41,7 @@
         text-decoration: none;
         font-weight: 500;
         transition: opacity 0.3s ease;
+        font-size: 0.9rem;
     }
 
     &__link, &__menu-icon {
@@ -53,6 +54,18 @@
     .navbar-link {
         &__menu-item {
             width: 19rem;
+        }
+
+        &__link {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (min-width: 1020px) {
+    .navbar-link {
+        &__link {
+            font-size: 1rem;
         }
     }
 }
