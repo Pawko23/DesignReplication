@@ -1,37 +1,39 @@
 @use '../abstracts' as *;
 
-.navbar {
+.navbar-link {
     padding: 2rem;
-    &__section-header {
+    &__heading {
         color: $white-default;
     }
 
-    &__box {
+    &__menu {
         margin-bottom: 1.2rem;
         padding: 1rem;
-      
-        &-heading {
-          margin-bottom: 0.6rem;
-          font-size: 1.1rem;
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            
+    
+            &:hover {
+                .navbar-link__link, .navbar-link__menu-icon {
+                    opacity: 1;
+                }
+            }  
         }
-        
-        &--desktop {
-            width: 20rem;
-        }
-    }
 
-    &__menu-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        cursor: pointer;
-
-        &:hover {
-            .navbar__link, .navbar__menu-icon {
+        &-icon {
+            opacity: 0.7;
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+    
+            &--rotate {
+                transform: rotate(90deg);
                 opacity: 1;
             }
-        }    
+        }
     }
 
     &__link {
@@ -45,14 +47,12 @@
         color: $white-default;
     }
 
-    &__menu-icon {
-        opacity: 0.7;
-        font-size: 0.8rem;
-        transition: transform 0.3s ease;
+}
 
-        &--rotate {
-            transform: rotate(90deg);
-            opacity: 1;
+@media (min-width: 992px) {
+    .navbar-link {
+        &__menu-item {
+            width: 19rem;
         }
     }
 }

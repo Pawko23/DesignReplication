@@ -1,6 +1,6 @@
 @use '../abstracts' as *;
 
-.navbar {
+.navbar-quicklink {
     &__submenu {
         list-style: none;
         &-item {
@@ -16,12 +16,18 @@
             font-weight: 500;
             transition: color 0.3s ease;
 
-            &--desktop {
-                font-size: 0.9rem;
-            }
-
             &:hover {
                 color: $white-default;
+            }
+        }
+    }
+}
+
+@media (min-width: 1020px) {
+    .navbar-quicklink {
+        &__submenu {
+            &-link {
+                font-size: 0.9rem;
             }
         }
     }
