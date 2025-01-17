@@ -22,12 +22,27 @@ body {
     
     &__content {
         text-decoration: none;
+        color: $white-default;
+        transition: color 0.3s ease;
     }
 
     &--with-arrow {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &--quicklink {
+        font-size: 0.8rem;
+        .link__content {
+            color: $quick-link-color;
+        }
+
+        &:hover {
+            .link__content {
+                color: $white-default;
+            }
+        }
     }
 
     &__icon {
@@ -53,5 +68,9 @@ body {
 @media (min-width: 1020px) {
     .link {
         font-size: 1.05rem;
+
+        &--quicklink {
+            font-size: 0.9rem;
+        }
     }
 }
