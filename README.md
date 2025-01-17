@@ -27,8 +27,9 @@ Although this project does not utilize Webpack, Vite or similar bundlers, I will
 
 In project's root directory:
 
-1. Run ```chmod +x build.sh``` <- this will allow build.sh script to build the application
-2. Run ```./build.sh```
+1. Run ```./build.sh```
+
+If file does not execute make sure it's executable by ```chmod +x ./build.sh``` command
 
 Page will automatically open in browser after successful build process.
 
