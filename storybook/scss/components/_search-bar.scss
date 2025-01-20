@@ -7,9 +7,15 @@
     align-items: center;
     margin: 2rem;
     padding: 0.5rem;
+    height: 2rem;
     background-color: $search-bar-background;
     border-radius: 1rem;
     border: 0.1rem solid $search-bar-background;
+    transition: border-color 0.2s ease;
+
+    &:focus-within {
+        border-color: $search-bar-focus;
+    }
     
     &__search {
         &-icon, &-input {
