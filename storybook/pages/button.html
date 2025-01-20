@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/594a9a3356.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/storybook.css">
+    <title>Button Component</title>
+</head>
+<body>
+    <div class="title">Link context</div>
+    <a href="#" class="button">Button in link</a>
+    
+    <div class="title">Navbar context</div>
+    <nav>
+        <button class="button">
+            Sample Btn
+            <i class="button__icon fa-solid fa-caret-down"></i>
+        </button>
+    </nav>
+    <div class="title">Form context</div>
+    <form>
+        <button class="button">
+            Submit Button 
+        </button>
+    </form>
+    <div class="title">Div context</div>
+    <div>
+        <button class="button">
+            With 
+            <i class="button__icon fa-solid fa-caret-down"></i>
+        </button>
+    </div>
+    <div>
+        <button class="button">
+            And without icon 
+        </button>
+    </div>
+    <div class="title">Ul context</div>
+    <ul>
+        <li>        
+            <button class="button">
+                Inside li 
+                <i class="button__icon fa-solid fa-caret-down"></i>
+            </button>
+        </li>
+    </ul>
+    <script src="../js/button.js"></script>
+</body>
+</html>

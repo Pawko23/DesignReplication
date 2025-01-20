@@ -1,59 +1,91 @@
 @use '../abstracts' as *;
 
-body {
-    display: flex;
-    flex-direction: column;
-}
-
 .title {
+    text-align: center;
     padding: 1rem;
 }
 
 .link {
-    padding: 0.5rem 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
     list-style: none;
+    text-decoration: none;
     cursor: pointer;
 
     &:hover {
-        .link__icon {
+        .link__arrow-right {
             opacity: 1;
         }
     } 
     
     &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         text-decoration: none;
         transition: color 0.3s ease;
     }
 
-    &--with-arrow {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
     &--quicklink {
         font-size: 0.8rem;
-        .link__content {
-            color: $quick-link-color;
-        }
+        color: $quick-link-color;
 
         &:hover {
-            .link__content {
-                color: $white-default;
+            color: $white-default;
+        }
+    }
+
+    &--section {
+        max-width: 15rem;
+        font-size: 1rem;
+        color: $link-secondary-color;
+        &:hover {
+            color: $link-secondary-color-hover;
+        }
+    }
+
+    // TODO: restyle those while building dropdown block component according to comment: https://github.com/Pawko23/DesignReplication/pull/3#discussion_r1925276472
+    &--dropdown-item {
+        color: $link-secondary-color;
+        max-width: 10rem;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+        &:hover {
+            background-color: $dropdown-item-background-color-hover;
+            color: $dropdown-item-color-hover;
+        }
+    }
+
+    &__arrow {
+        &-right, &-down {
+            font-size: 0.6rem;
+            opacity: 0.7;
+            transition: transform 0.3s ease;
+        }
+    
+        &-down {
+            position: relative;
+            display: inline-block;
+            margin-left: 0.5rem;
+        }
+
+        &-right {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+    
+            &--rotate {
+                transform: translateY(-50%) rotate(90deg);
+                opacity: 1; 
             }
         }
     }
 
-    &__icon {
-        margin-left: 1rem;
-        font-size: 0.6rem;
-        opacity: 0.7;
-        transition: transform 0.3s ease;
-
-        &--rotate {
-            transform: rotate(90deg);
-            opacity: 1; 
-        }
+    &__content, &__arrow-down, &__arrow-right {
+        color: inherit;
     }
 }
 
@@ -67,9 +99,16 @@ body {
 @media (min-width: 1020px) {
     .link {
         font-size: 1.05rem;
-
         &--quicklink {
             font-size: 0.9rem;
+        }
+
+        &--section {
+            font-size: 1.05rem;
+        }
+
+        &--dropdown-item {
+            font-size: 1rem;
         }
     }
 }

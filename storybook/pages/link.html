@@ -9,63 +9,77 @@
 </head>
 <body>
 
-    <span class="title">Span Links:</span>
-    <span class="link">
-        <a href="#" class="link__content">Sample Text</a>
-    </span>
+    <div class="title">Links:</div>
+    <a href="#" class="link">Sample Text</a>
 
-    <span class="link link--with-arrow">
-        <a href="#" class="link__content">With Icon</a>
-        <i class="link__icon fa-solid fa-caret-right"></i>
-    </span>
+    <a href="#" class="link link--with-arrow">With Icon
+        <i class="link__arrow-right fa-solid fa-caret-right"></i>
+    </a>
 
-    <span class="title">Li Links:</span>
-    <li class="link">
-        <a href="#" class="link__content">Default text</a>
-    </li>
-
-    <li class="link link--with-arrow">
-        <a href="#" class="link__content">Very very very long text with icon to show behaviour</a>
-        <i class="link__icon fa-solid fa-caret-right"></i>
-    </li>
-
-    <span class="title">Ul list context:</span>
+    <div class="title">Li Links:</div>
     <ul>
         <li class="link">
-            <a href="#" class="link__content">Expand here</a>
+            <a href="#" class="link__content">Default text</a>
         </li>
-    </ul>
-
-    <ul>
+    
         <li class="link link--with-arrow">
-            <a href="#" class="link__content">See More</a>
-            <i class="link__icon fa-solid fa-caret-right"></i>
+            <a href="#" class="link__content">Very very very long text without icon to show behaviour
+            </a>
         </li>
     </ul>
 
-    <span class="title">Ol list context:</span>
+    <div class="title">Ol list context:</div>
     <ol>
         <li class="link">
             <a href="#" class="link__content">Check this out</a>
         </li>
-    </ol>
-    <ol>
         <li class="link link--with-arrow">
-            <a href="#" class="link__content">Last example</a>
-            <i class="link__icon fa-solid fa-caret-right"></i>
+            <a href="#" class="link__content">Last example
+                <i class="link__arrow-right fa-solid fa-caret-right"></i>
+            </a>
         </li>
     </ol>
 
-    <span class="title">Quicklink span</span>
-    <span class="link link--quicklink">
-        <a href="#" class="link__content">Quicklink text</a>
-    </span>
+    <div class="title">Quicklink span</div>
+    <a href="#" class="link link--quicklink">Quicklink text</a>
 
-    <span class="title">Quicklink li:</span>
-    <li class="link link--quicklink">
-        <a href="#" class="link__content">Default text</a>
-    </li>
+    <div class="title">Quicklink li:</div>
+    <ul>
+        <li class="link link--quicklink">
+            <a href="#" class="link__content">Default text</a>
+        </li>
+    </ul>
 
+    <div class="title">Section link:</div>
+    <a href="#" class="link link--section">Section link</a>
+
+    <div class="title">Section link with icon:</div>
+    <a href="#" class="link link--section">First Icon Down
+        <i class="link__arrow-down fa-solid fa-caret-down"></i>
+    </a>
+
+    <div class="title">Section link li</div>
+    <ul>
+        <li class="link link--section">
+            <a href="#" class="link__content">Hello world</a>
+        </li>
+    
+        <li class="link link--section">
+            <a href="#" class="link__content">Another very long example but this time to show section link behaviour
+                <i class="link__arrow-down fa-solid fa-caret-down"></i>
+            </a>
+        </li>
+    </ul>
+
+    <!-- TODO: restyle those while building dropdown block component according to comment: https://github.com/Pawko23/DesignReplication/pull/3#discussion_r1925276472 -->
+    <div class="title">Dropdown menu links</div>
+    <a href="#" class="link link--dropdown-item">Short</a>
+
+    <ol>
+        <li class="link link--dropdown-item">
+            <a href="#" class="link__content">Long dropdown item</a>
+        </li>
+    </ol>
     <script src="../js/link.js"></script>
 </body>
 </html>

@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     links.forEach(link => {
         link.addEventListener('click', () => {
-            const icon = link.querySelector('.link__icon');
+            const icon = link.querySelector('.link__arrow-right');
             if(icon) {
-                icon.classList.toggle('link__icon--rotate');
+                icon.classList.toggle('link__arrow-right--rotate');
             }
         });
     });
