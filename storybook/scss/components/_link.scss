@@ -22,6 +22,7 @@ body {
     
     &__content {
         text-decoration: none;
+        padding: 0.5rem 1rem;
         transition: color 0.3s ease;
     }
 
@@ -49,6 +50,17 @@ body {
         color: $link-secondary-color;
         &:hover {
             color: $link-secondary-color-hover;
+        }
+    }
+
+    &--dropdown-item {
+        color: $link-secondary-color;
+        width: 80%;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+        &:hover {
+            background-color: $dropdown-item-background-color-hover;
+            color: $dropdown-item-color-hover;
         }
     }
 
@@ -87,13 +99,16 @@ body {
 @media (min-width: 1020px) {
     .link {
         font-size: 1.05rem;
-
         &--quicklink {
             font-size: 0.9rem;
         }
 
         &--section {
             font-size: 1.05rem;
+        }
+
+        &--dropdown-item {
+            font-size: 1rem;
         }
     }
 }
