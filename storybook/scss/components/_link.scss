@@ -15,7 +15,7 @@ body {
     cursor: pointer;
 
     &:hover {
-        .link__icon {
+        .link__arrow-right {
             opacity: 1;
         }
     } 
@@ -25,35 +25,55 @@ body {
         transition: color 0.3s ease;
     }
 
-    &--with-arrow {
+    &--with-arrow, &--section {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+    }
+
+    &--with-arrow {
+        justify-content: space-between;
     }
 
     &--quicklink {
         font-size: 0.8rem;
-        .link__content {
-            color: $quick-link-color;
-        }
+        color: $quick-link-color;
 
         &:hover {
-            .link__content {
-                color: $white-default;
-            }
+            color: $white-default;
         }
     }
 
-    &__icon {
-        margin-left: 1rem;
+    &--section {
+        max-width: 15rem;
+        font-size: 1rem;
+        color: $link-secondary-color;
+        &:hover {
+            color: $link-secondary-color-hover;
+        }
+    }
+
+    &__arrow-right, &__arrow-down {
+        vertical-align: middle;
         font-size: 0.6rem;
         opacity: 0.7;
+    }
+
+    &__arrow-down {
+        padding-left: 0.5rem;
+    }
+
+    &__arrow-right {
+        margin-left: 1rem;
         transition: transform 0.3s ease;
 
         &--rotate {
             transform: rotate(90deg);
             opacity: 1; 
         }
+    }
+
+    &__content, &__arrow-down, &__arrow-right {
+        color: inherit;
     }
 }
 
@@ -70,6 +90,10 @@ body {
 
         &--quicklink {
             font-size: 0.9rem;
+        }
+
+        &--section {
+            font-size: 1.05rem;
         }
     }
 }
