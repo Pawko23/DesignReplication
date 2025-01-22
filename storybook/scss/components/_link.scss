@@ -1,10 +1,5 @@
 @use '../abstracts' as *;
 
-body {
-    display: flex;
-    flex-direction: column;
-}
-
 .title {
     padding: 1rem;
 }

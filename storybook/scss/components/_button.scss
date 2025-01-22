@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.button {
+    width: 90%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    color: $white-default;
+    background-color: $link-secondary-color;
+    border: none;
+    font-weight: 600;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $link-secondary-color-hover;
+    }
+
+    &__icon {
+        font-size: 0.7rem;
+        vertical-align: text-top;
+        line-height: 1.3;
+        padding-left: 0.3rem;
+        opacity: 0.7;
+    }
+}
+
+@media (min-width: 992px) {
+    .button {
+        width: 19rem;
+        font-size: 1rem;
+    }
+}
