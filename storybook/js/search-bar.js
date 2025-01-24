@@ -2,17 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll(".search-bar").forEach((searchBar) => {
         searchBar.addEventListener("input", (event) => {
             if (!event.target.classList.contains("search-bar__search-input")) return;
-            const clearIcon = searchBar.querySelector(".fa-xmark");
+            const clearIcon = searchBar.querySelector(".search-bar__clear-icon");
             if (!clearIcon) return;
-            event.target.value ? clearIcon.style.display = "block" : clearIcon.style.display = "none";
+            clearIcon.classList.add("search-bar__clear-icon--show");
         });
     
         searchBar.addEventListener("click", (event) => {
-            if (!event.target.classList.contains("fa-xmark")) return;
+            if (!event.target.classList.contains("search-bar__clear-icon")) return;
             const input = searchBar.querySelector(".search-bar__search-input");
-            if (!input) return;
+            const clearIcon = searchBar.querySelector(".search-bar__clear-icon");
+            if (!input || !clearIcon) return;
             input.value = "";
-            event.target.style.display = "none";
+            clearIcon.classList.toggle("search-bar__clear-icon--show");
         });
     });
 });
