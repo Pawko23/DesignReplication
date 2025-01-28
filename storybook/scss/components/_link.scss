@@ -28,6 +28,10 @@
         transition: color 0.3s ease;
     }
 
+    &--with-arrow {
+        position: relative;
+    }
+
     &--quicklink {
         font-size: 0.8rem;
         color: $quick-link-color;
