@@ -1,6 +1,6 @@
 @use '../abstracts' as *;
 
-.title {
+.burger-title {
     display: block;
 
     &--info {
@@ -30,7 +30,7 @@
         display: none;
     }
 
-    .title {
+    .burger-title {
         display: none;
 
         &--info {
