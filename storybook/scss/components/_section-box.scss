@@ -1,0 +1,88 @@
+@use '../abstracts' as *;
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 1rem;
+
+    &--row {
+        flex-direction: row;
+    }
+}
+
+.section-box {
+    position: relative;
+    width: 100%;
+    max-width: 37.5rem;
+    height: 0;
+    padding-bottom: 56.25%;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.2rem 0.6rem $box-shadow;
+    margin: 1rem;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.2rem;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    
+        &--active {
+            opacity: 1;
+        }
+    }
+
+    &--small {
+        max-width: 18rem;
+        padding-bottom: 30%;
+    }
+
+    &--layout {
+        max-width: 12rem;
+        padding-bottom: 20%;
+    }
+
+    &--square {
+        padding-bottom: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .section-box {
+        max-width: 44rem;
+        padding-bottom: 0;
+        height: 28rem;
+
+        &--small {
+            max-width: 21rem;
+            height: 12rem;
+        }
+
+        &--layout {
+            max-width: 15rem;
+            height: 10rem;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .section-box {
+        max-width: 47rem;
+
+        &--small {
+            max-width: 23rem;
+            height: 15rem;
+        }
+
+        &--layout {
+            max-width: 18rem;
+            height: 12rem;
+        }
+    }
+}

@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/594a9a3356.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/storybook.css">
-    <title>Dropdown Component</title>
+    <title>Drodown Component</title>
 </head>
 <body>
-    <ul>
-        <li class="link">
-            <a href="#" class="link__content">Check this out</a>
-        </li>
-        <li class="link link--with-arrow">
-            <a href="#" class="link__content">Last example
-                <i class="link__arrow-right fa-solid fa-caret-right"></i>
-            </a>
-            <ul class="dropdown">
-                <li class="dropdown__item link--quicklink">
-                    <a href="#" class="link__content">Default text</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
+    <div class="dropdown">
+        <button class="button dropdown-toggler">
+            With 
+            <i class="button__icon fa-solid fa-caret-down"></i>
+        </button>
+        <ul class="dropdown-menu">
+            <li class="link dropdown__item">
+                <a href="#" class="link__content">item1</a>
+            </li>
+            <li class="link dropdown__item">
+                <a href="#" class="link__content">dropdown2</a>
+            </li>
+            <li class="link dropdown__item">
+                <a href="#" class="link__content">rng</a>
+            </li>
+            <li class="link dropdown__item">
+                <a href="#" class="link__content">winter's coming to an end (fortunately)</a>
+            </li>
+        </ul>
+    </div>
     <script src="../js/dropdown.js"></script>
 </body>
 </html>

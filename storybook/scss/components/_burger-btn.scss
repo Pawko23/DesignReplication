@@ -19,6 +19,7 @@
     border-color: $burger-btn-border;
     border-radius: 0.3rem;
     color: $burger-btn-color;
+    cursor: pointer;
 
     &:hover {
         background-color: transparent;
