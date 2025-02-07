@@ -28,10 +28,14 @@
         transition: color 0.3s ease;
     }
 
+    &--with-arrow {
+        display: block;
+    }
+
     &--quicklink {
         font-size: 0.8rem;
         color: $quick-link-color;
-
+        padding: 0.2rem 0;
         &:hover {
             color: $white-default;
         }
@@ -43,18 +47,6 @@
         color: $link-secondary-color;
         &:hover {
             color: $link-secondary-color-hover;
-        }
-    }
-
-    // TODO: restyle those while building dropdown block component according to comment: https://github.com/Pawko23/DesignReplication/pull/3#discussion_r1925276472
-    &--dropdown-item {
-        color: $link-secondary-color;
-        max-width: 10rem;
-        border-radius: 0.5rem;
-        font-size: 0.9rem;
-        &:hover {
-            background-color: $dropdown-item-background-color-hover;
-            color: $dropdown-item-color-hover;
         }
     }
 
@@ -72,11 +64,8 @@
         }
 
         &-right {
-            position: absolute;
-            top: 50%;
-            right: 5%;
             transform: translateY(-50%);
-    
+            align-self: flex-end;
             &--rotate {
                 transform: translateY(-50%) rotate(90deg);
                 opacity: 1; 

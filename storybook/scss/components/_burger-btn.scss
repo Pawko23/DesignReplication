@@ -1,0 +1,41 @@
+@use '../abstracts' as *;
+
+.burger-title {
+    display: block;
+
+    &--info {
+        display: none;
+    }
+}
+
+.burger-btn {
+    display: block;
+    padding: 0.3rem 1.2rem;
+    margin: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    background-color: transparent;
+    border: 0.1rem solid transparent;
+    border-color: $burger-btn-border;
+    border-radius: 0.3rem;
+    color: $burger-btn-color;
+    cursor: pointer;
+
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+@media (min-width: 992px) {
+    .burger-btn {
+        display: none;
+    }
+
+    .burger-title {
+        display: none;
+
+        &--info {
+            display: block;
+        }
+    }
+}

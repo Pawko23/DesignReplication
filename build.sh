@@ -2,6 +2,8 @@
 
 DIST_DIR_STORYBOOK="dist"
 STORYBOOK_SRC="storybook"
+ASSETS_SRC="$STORYBOOK_SRC/assets"
+ASSETS_DEST="$DIST_DIR_STORYBOOK/assets"
 
 if [ -d "$DIST_DIR_STORYBOOK" ]; then
   echo "Removing existing $DIST_DIR_STORYBOOK directory..."
@@ -11,6 +13,7 @@ fi
 mkdir -p "$DIST_DIR_STORYBOOK/css"
 mkdir -p "$DIST_DIR_STORYBOOK/js"
 mkdir -p "$DIST_DIR_STORYBOOK/pages"
+mkdir -p "$ASSETS_DEST"
 echo "Created $DIST_DIR_STORYBOOK directory structure."
 
 cp "$STORYBOOK_SRC/storybook.html" "$DIST_DIR_STORYBOOK"
@@ -61,6 +64,13 @@ if [ -d "$PAGES_SRC" ]; then
   echo "Copied HTML pages to $PAGES_DEST."
 else
   echo "Pages source directory $PAGES_SRC not found. Skipping HTML pages."
+fi
+
+if [ -d "$ASSETS_SRC" ]; then
+  cp "$ASSETS_SRC"/*.{png,svg} "$ASSETS_DEST"
+  echo "Copied asset files to $ASSETS_DEST."
+else
+  echo "Assets source directory $ASSETS_SRC not found. Skipping asset files."
 fi
 
 if [ -f "$DIST_DIR_STORYBOOK/storybook.html" ]; then
